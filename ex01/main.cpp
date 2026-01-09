@@ -5,20 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 00:23:34 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/08 00:23:35 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/01/09 00:10:24 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/01/09 00:10:25 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie *newZombie(std::string name);
-void    randomChump(std::string name);
-
 int main()
 {
-    Zombie *player = newZombie("Frankenstein");
-    player->announce();
-    randomChump("Moritz");
-    delete player; //bunu koymayınca valgrind 3 alloc 2 free diyor. koyunca 3'ü de freeleniyor.
+	int i, number = 12;
+
+	Zombie* zmb = zombieHorde(number, "Zozoluski");
+
+	for (i = 0; i < number; i++)
+	{
+		zmb[i].announce();
+	}
+	delete [] zmb;
 }

@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 00:23:34 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/08 00:23:35 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/01/08 00:24:51 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/01/08 00:29:57 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-Zombie *newZombie(std::string name);
-void    randomChump(std::string name);
+#include <iostream>
 
-int main()
+class Zombie
 {
-    Zombie *player = newZombie("Frankenstein");
-    player->announce();
-    randomChump("Moritz");
-    delete player; //bunu koymayınca valgrind 3 alloc 2 free diyor. koyunca 3'ü de freeleniyor.
-}
+    private:
+        std::string name;
+    public:
+        Zombie (std::string nm);
+        ~Zombie();
+        void    announce (void);
+};
+
+#endif

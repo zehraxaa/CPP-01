@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 00:23:34 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/08 00:23:35 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/01/09 00:10:33 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/01/09 00:10:34 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie *newZombie(std::string name);
-void    randomChump(std::string name);
-
-int main()
+Zombie::Zombie()
 {
-    Zombie *player = newZombie("Frankenstein");
-    player->announce();
-    randomChump("Moritz");
-    delete player; //bunu koymayınca valgrind 3 alloc 2 free diyor. koyunca 3'ü de freeleniyor.
+	std::cout<<"Nameless zombie created"<<std::endl;
+}
+
+Zombie::~Zombie()
+{
+	std::cout<<"Zombie destroyed"<<std::endl;
+}
+
+void	Zombie::announce(void)
+{
+	std::cout<<name<<" BraiiiiiiinnnzzzZ..."<<std::endl;
+}
+
+void	Zombie::setName(std::string nm)
+{
+	this->name = nm;
 }
