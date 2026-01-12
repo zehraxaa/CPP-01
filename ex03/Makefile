@@ -4,7 +4,7 @@ CC = g++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = weapon
+NAME = attack
 
 OBJ = $(SRC:.cpp=.o)
 

@@ -1,10 +1,10 @@
-SRC = main.cpp
+SRC = main.cpp Harl.cpp
 
 CC = g++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = sosed
+NAME = harlFilter
 
 OBJ = $(SRC:.cpp=.o)
 
