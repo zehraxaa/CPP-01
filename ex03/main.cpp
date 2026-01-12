@@ -5,24 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 00:10:24 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/10 00:48:55 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/01/10 00:50:52 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/01/10 00:51:11 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
-	int i, number = 12;
-
-	Zombie* zmb = zombieHorde(number, "Zozoluski");
-
-	for (i = 0; i < number; i++)
 	{
-		zmb[i].announce();
-	}
-	delete [] zmb;
+		Weapon club = Weapon("crude spiked club");
 
-	return (0);
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
 }

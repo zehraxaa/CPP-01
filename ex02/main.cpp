@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 00:26:37 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/10 00:38:32 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/01/10 00:48:43 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ int main()
 	std::cout<<"The value of the string variable: "<<variable<<std::endl;
 	std::cout<<"The value pointed to by stringPTR: "<<*stringPTR<<std::endl;
 	std::cout<<"The value pointed to by stringREF: "<<stringREF<<std::endl;
+
+	return (0);
 }

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 00:10:24 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/10 00:48:55 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/01/10 00:54:46 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/01/10 01:01:51 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-int main()
+Weapon::Weapon(std::string type)
 {
-	int i, number = 12;
+	this->type = type;
+}
 
-	Zombie* zmb = zombieHorde(number, "Zozoluski");
+Weapon::~Weapon() { }
 
-	for (i = 0; i < number; i++)
-	{
-		zmb[i].announce();
-	}
-	delete [] zmb;
+std::string Weapon::getType()
+{
+	return type;
+}
 
-	return (0);
+void Weapon::setType(std::string newType)
+{
+	type = newType;
 }

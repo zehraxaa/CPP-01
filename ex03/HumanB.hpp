@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 00:10:24 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/10 00:48:55 by aaydogdu         ###   ########.fr       */
+/*   Created: 2026/01/10 15:13:36 by aaydogdu          #+#    #+#             */
+/*   Updated: 2026/01/10 15:18:42 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-int main()
+#include <iostream>
+#include "Weapon.hpp"
+
+class HumanB
 {
-	int i, number = 12;
+	private:
+		std::string name;
+		Weapon *weapon;
+	public:
+		HumanB(std::string name);
+		~HumanB();
+		void attack();
+		void setWeapon(Weapon &weapon);
+		std::string getName();
+		void setName(std::string name);
+};
 
-	Zombie* zmb = zombieHorde(number, "Zozoluski");
-
-	for (i = 0; i < number; i++)
-	{
-		zmb[i].announce();
-	}
-	delete [] zmb;
-
-	return (0);
-}
+#endif
