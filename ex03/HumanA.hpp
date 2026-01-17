@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 14:08:07 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/10 15:06:51 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/01/17 11:29:55 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ class HumanA
 	public:
 		HumanA(std::string name, Weapon &weapon);
 		~HumanA();
-		std::string getName();
+		std::string& getName() const;
 		void setName(std::string name);
 		void attack();
-		//void setWeapon(std::string); ben buna gerek olduğunu düşünmüyorum abi. mainde zaten setType'ı weapon objesi üzerinden çağırmış. buna ne gerek var yani
 };
 
 #endif

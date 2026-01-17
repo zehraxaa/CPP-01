@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:46:00 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/12 16:47:13 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:23:17 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,15 @@ void harlSwitch(char *argv, Harl &obj) {
   }
 }
 
-int main(int argc, char **argv) {
-  Harl obj;
-
-  if (argc != 2) {
-    std::cout << "There must be 2 arguments." << std::endl;
+int main(int argc, char **argv)
+{
+  if(argc != 2)
+  {
+    std::cout << "There must be 2 arguments" << std::endl;
     return (1);
   }
+
+  Harl obj;
+
   harlSwitch(argv[1], obj);
 }

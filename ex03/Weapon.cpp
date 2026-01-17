@@ -12,6 +12,8 @@
 
 #include "Weapon.hpp"
 
+Weapon::weapon() {}
+
 Weapon::Weapon(std::string type)
 {
 	this->type = type;

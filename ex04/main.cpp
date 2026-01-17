@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:02:32 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/12 12:28:53 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/01/17 11:49:37 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int myReplace(char **argv, std::string str)
 		if (pos != -1 && pos == i)
 		{
 			outfile << argv[3];
-			i += std::string(argv[2]).size() - 1; //indexi kelime boyu kadar ileri at
+			i += std::string(argv[2]).size() - 1;
 		}
 		else
 			outfile << str[i];
@@ -55,12 +55,17 @@ int main(int argc, char **argv)
 	
 	if (infile.fail())
 	{
-		std::cout<<"File could not opened"<<std::endl;
+		std::cout<<"Infile could not opened"<<std::endl;
 		return (1);
 	}
 	std::stringstream buffer;	
 	buffer<<infile.rdbuf();
 	str = buffer.str();
+	if (str.empty())
+	{
+		std::cout<<"Infile is empty"<<std::endl;
+		return (1);
+	}
 	infile.close();
 	
 	return(myReplace(argv, str));

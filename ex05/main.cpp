@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 14:54:43 by aaydogdu          #+#    #+#             */
-/*   Updated: 2026/01/12 15:18:04 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:20:24 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int main()
 
 	obj.complain("DEBUG");
 	obj.complain("INFO");
-	obj.complain("GUBED");
 	obj.complain("WARNING");
 	obj.complain("ERROR");
 }
